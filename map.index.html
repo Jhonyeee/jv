@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input {
+            font-size: 16px;
+            padding: 10px;
+       
+       
+       
+       }
+    
+  #map {
+    height: 400px;
+    width: 100%;
+}
+  
+    
+    
+    </style>
+</head>
+<body>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="togglePasswordVisibility()">Show/Hide Password</button>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+
+
+<iframe width="600" height="450" style="border:0" Loading="lazy" allowfullscreen
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJgTwKgJcpQg0RaSKMYcHeNsQ&key=..."></iframe>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+    
+    </script>
+
+
+
+
+
+
+
+<script>
+    let map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 40.7128, lng: -74.0060 }, // Set the initial map center (New York City in this case)
+            zoom: 12 // Set the initial zoom level
+        });
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
